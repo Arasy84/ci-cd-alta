@@ -29,6 +29,7 @@ func InitConfig() *AppConfig {
 }
 
 func loadConfig() *AppConfig {
+	var res = new(AppConfig)
 	if val, found := os.LookupEnv("SERVERPORT"); found {
 		port, err := strconv.Atoi(val)
 		if err != nil {
